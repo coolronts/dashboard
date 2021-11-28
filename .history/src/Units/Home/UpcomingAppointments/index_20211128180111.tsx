@@ -31,7 +31,7 @@ const UpcomingAppointments: React.FC = () => {
               <div className={styles.row} key={i}>
                 <div className="w-2/3 flex items-center">
                   <div className="text-center">
-                    <p className="text-3xl text-gray-700">{Math.floor((Math.random()*30)+1) }</p>
+                    <p className="text-3xl text-gray-700">{Math.random()*31 }</p>
                     <p className="text-gray-400">{item.month.substring(0,3)}</p>
                   </div>
                   <div className="text-left ml-6">
