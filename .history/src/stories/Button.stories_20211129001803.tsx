@@ -5,5 +5,3 @@ export default {
   component: Primary,
   RoundIcon,
 };
-
-export const PrimaryButton = () => <Primary name="Primary" />;
