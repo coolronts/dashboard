@@ -17,9 +17,8 @@ const SectionHeader: React.FC = () => {
   const [header,setHeader] = useState<string>("")
 
   useEffect(() => {
-    setHeader(location.pathname.substr(1, location.pathname.length))
-  }, [location])
-  
+    setHeader(window.location.pathname.substr(1, window.location.pathname.length))
+  }, [location,header])
   return (
     <>
       <div className={styles.body}>

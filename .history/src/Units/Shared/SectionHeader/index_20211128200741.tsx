@@ -4,7 +4,7 @@ import Avatar from '../../../Components/Avatar'
 import {Notification} from '../../../Components/Buttons'
 import {Notifications} from '../../../Components/Icons'
 import TextBox from '../../../Components/TextBox'
-import { useLocation } from 'react-router-dom'
+import useReactPath from '../../../Utils/Hooks/useReactPath'
 
 const SectionHeader: React.FC = () => {
   const styles = {
@@ -12,14 +12,14 @@ const SectionHeader: React.FC = () => {
     heading: "text-3xl text-gray-800 font-bold capitalize",
     leftComponent: "flex items-center justify-around"
   }
-  const location = useLocation()
 
-  const [header,setHeader] = useState<string>("")
-
-  useEffect(() => {
-    setHeader(location.pathname.substr(1, location.pathname.length))
-  }, [location])
+  const [header, setHeader] = useState<string>("")
   
+  const path = useReactPath();
+  useEffect(() => {
+     console.log(path)
+  }, [path]);
+
   return (
     <>
       <div className={styles.body}>

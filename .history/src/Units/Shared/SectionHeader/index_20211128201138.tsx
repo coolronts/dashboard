@@ -18,8 +18,8 @@ const SectionHeader: React.FC = () => {
 
   useEffect(() => {
     setHeader(location.pathname.substr(1, location.pathname.length))
-  }, [location])
-  
+    console.log(location)
+  }, [location,header])
   return (
     <>
       <div className={styles.body}>
