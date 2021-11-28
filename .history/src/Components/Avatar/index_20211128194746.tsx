@@ -14,7 +14,7 @@ const Avatar: React.FC<AvatarProps> = ({ img = imgLink, radius =45 }) => {
         style={{width:radius, height:radius}}
         className={styles.avatar}
         src={img}
-        alt="avatar"
+        alt=""
       />
     </div>
   )
