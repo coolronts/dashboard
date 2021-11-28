@@ -1,8 +1,8 @@
 import { Calendar, Clients, Overview, Services, Settings, Staff } from '../../../Components/Icons'
-import { useEffect, useState } from 'react'
 
 import {CompanyLogo} from '../../../Components/Icons'
 import Logo from '../../../Components/Logo'
+import { useState } from 'react'
 
 const LeftDrawer: React.FC = () => {
   const styles = {
@@ -19,14 +19,12 @@ const LeftDrawer: React.FC = () => {
     { Icon: <Services />, name: 'services', color: 'purple' },
     { Icon: <Settings />, name: 'settings', color: 'gray' },
   ]
-
-  useEffect(()=>{},[activeLogo])
     
   return (
     <div className="m-auto">
       <CompanyLogo className={styles.CompanyLogo}/>
       <div className={styles.menu}>
-        {icons.map((icon) =>  <Logo Icon={icon.Icon} name={icon.name} color={icon.color} key={icon.name} active={activeLogo===icon.name? true:false} handleActive={handleActive}/>)}
+        {icons.map((icon, index) =>  <Logo Icon={icon.Icon} name={icon.name} color={icon.color} key={index} active={activeLogo===icon.name? true:false} />)}
       </div>
     </div>
   )

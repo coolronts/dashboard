@@ -1,6 +1,7 @@
+import React, {useState} from 'react';
+
 import {ArrowRight} from '../Icons'
 import {Link} from 'react-router-dom'
-import React from 'react';
 
 interface IconProps {
   Icon: React.ReactNode;
@@ -11,7 +12,8 @@ interface IconProps {
 }
 
 
-const Logo: React.FC<IconProps> = ({ Icon, name, color,active, handleActive }) => {
+const Logo: React.FC<IconProps> = ({ Icon, name, color }) => {
+  const [active, setActive] = useState('overview')
 
   const styles = {
     body:`relative group my-4 text-2xl px-12 py-4 bg-white ring-2 ring-gray-300 w-20 rounded-2xl flex flex-col items-center justify-around hover:bg-blue-primary hover:shadow-2xl cursor-pointer ${active ? 'bg-blue-primary shadow-2xl' :'bg-white'}`,
@@ -22,7 +24,7 @@ const Logo: React.FC<IconProps> = ({ Icon, name, color,active, handleActive }) =
   
 
   return (
-    <Link to={`/${name}`} onClick={()=>handleActive(name)}>
+    <Link to={`/${name}`} onClick={()=>setActive(name)}>
       <div className={styles.body}>
         <div className={styles.icon}> {Icon} </div> 
         <p className={styles.name}> {name} </p>

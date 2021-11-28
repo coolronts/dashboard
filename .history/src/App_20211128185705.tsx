@@ -2,8 +2,8 @@ import './App.css';
 
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 
+import Home from './Pages/Home'
 import { LeftDrawer } from './Units/Shared'
-import Overview from './Pages/Overview'
 import {SectionHeader} from './Units/Shared'
 
 function App() {
@@ -12,16 +12,16 @@ function App() {
   }
   return (
     <BrowserRouter>
-      <div className="App flex">
-        <div className={styles.leftDrawer}>
-          <LeftDrawer/>
-        </div>
-        <div className="w-full mx-8">
-          <SectionHeader />
-            <Routes>
-              <Route path="/overview" element={<Overview/>} />
-            </Routes>
-        </div>
+    <div className="App flex">
+      <div className={styles.leftDrawer}>
+        <LeftDrawer/>
+      </div>
+      <div className="w-full mx-8">
+        <SectionHeader />
+          <Routes>
+            <Route path="/" element={<Home/>} />
+          </Routes>
+      </div>
       </div>
     </BrowserRouter>
   );

@@ -19,7 +19,7 @@ function App() {
         <div className="w-full mx-8">
           <SectionHeader />
             <Routes>
-              <Route path="/overview" element={<Overview/>} />
+              <Route path="/" element={<Overview/>} />
             </Routes>
         </div>
       </div>

@@ -10,17 +10,14 @@ const SectionHeader: React.FC = () => {
     leftComponent: "flex items-center justify-around"
   }
   return (
-    <>
-      <div className={styles.body}>
-        <h1 className={styles.heading}>Overview</h1>
-        <div className={styles.leftComponent}>
-          <TextBox />
-          <Notification Icon={<Notifications />} />
-          <Avatar />
-        </div>
+    <div className={styles.body}>
+      <h1 className={styles.heading}>Overview</h1>
+      <div className={styles.leftComponent}>
+        <TextBox />
+        <Notification Icon={<Notifications />} />
+        <Avatar />
       </div>
-      <hr className="bg-gray-300 h-1 my-3" />
-    </>
+    </div>
   )
 }
 

@@ -19,7 +19,7 @@ const SectionHeader: React.FC = () => {
           <Avatar />
         </div>
       </div>
-      <hr className="bg-gray-300 h-1 my-3" />
+      <hr className="bg-gray-300 h-1 my-6" />
     </>
   )
 }

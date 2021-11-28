@@ -1,8 +1,8 @@
 import { Calendar, Clients, Overview, Services, Settings, Staff } from '../../../Components/Icons'
-import { useEffect, useState } from 'react'
 
 import {CompanyLogo} from '../../../Components/Icons'
 import Logo from '../../../Components/Logo'
+import { useState } from 'react'
 
 const LeftDrawer: React.FC = () => {
   const styles = {
@@ -19,8 +19,6 @@ const LeftDrawer: React.FC = () => {
     { Icon: <Services />, name: 'services', color: 'purple' },
     { Icon: <Settings />, name: 'settings', color: 'gray' },
   ]
-
-  useEffect(()=>{},[activeLogo])
     
   return (
     <div className="m-auto">

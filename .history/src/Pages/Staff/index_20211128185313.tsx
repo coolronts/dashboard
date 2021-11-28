@@ -3,7 +3,7 @@ import {Left, Right} from '../../Units/Home/Section'
 import  {SectionHeader} from '../../Units/Shared'
 import SplitScreen from '../../Components/SplitScreen'
 
-const Home: React.FC = () => {
+const Staff: React.FC = () => {
   return (
     <div className="mt-12">
       <SectionHeader />
@@ -16,4 +16,4 @@ const Home: React.FC = () => {
   )
 }
 
-export default Home
+export default Staff

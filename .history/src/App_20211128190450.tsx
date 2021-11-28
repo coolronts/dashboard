@@ -2,8 +2,8 @@ import './App.css';
 
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 
+import Home from './Pages/Overview'
 import { LeftDrawer } from './Units/Shared'
-import Overview from './Pages/Overview'
 import {SectionHeader} from './Units/Shared'
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
         <div className="w-full mx-8">
           <SectionHeader />
             <Routes>
-              <Route path="/overview" element={<Overview/>} />
+              <Route path="/" element={<Home/>} />
             </Routes>
         </div>
       </div>
