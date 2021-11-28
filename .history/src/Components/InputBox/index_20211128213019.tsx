@@ -1,6 +1,6 @@
 import {Search} from '../Icons'
 
-const TextBox: React.FC = () => {
+const SearchBox: React.FC = () => {
   const styles = {
     body: "relative",
     textBox: "bg-gray-200 w-64 rounded-lg py-3 px-4 font-semibold text-sm focus:ring-2 ring-gray-600 outline-none",
@@ -16,4 +16,4 @@ const TextBox: React.FC = () => {
   )
 }
 
-export default TextBox
+export default SearchBox
