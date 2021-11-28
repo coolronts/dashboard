@@ -1,9 +1,9 @@
-import BarDashboard from '../../../../Components/BarDashBoard';
+import BarDashboard from '../../../../Components/BarlDashBoard';
 
 const Right: React.FC = () => {
   return (
     <div >
-      <BarDashboard />
+      Right
     </div>
   )
 }
