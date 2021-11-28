@@ -6,8 +6,8 @@ const Right: React.FC = () => {
       <div className="mr-1">
         <BarDashboard color="#5DB1F8"/>
       </div>
-      <div className="mr-1">
-        <BarDashboard color="#9568FF"/>
+      <div className="mr-1" color="#9568FF">
+        <BarDashboard />
       </div>
       <div className="mr-1">
         <BarDashboard />

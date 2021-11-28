@@ -2,7 +2,7 @@ import {Profile} from '../../index'
 
 const Left: React.FC = () => {
   return (
-    <div className="pr-3">
+    <div className="pr-2">
       <Profile/>
     </div>
   )

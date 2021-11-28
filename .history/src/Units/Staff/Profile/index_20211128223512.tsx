@@ -18,7 +18,7 @@ const Profile: React.FC = () => {
     setData(createRandomData())
   }
   return (
-    <div>
+    <div className="p">
       {data != null && (
         <Card Element={
           <div className="flex flex-col items-center justify-center font-sans px-8">

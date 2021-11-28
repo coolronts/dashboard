@@ -5,7 +5,7 @@ import SplitScreen from '../../Components/SplitScreen'
 const Staff: React.FC = () => {
   return (
     <div className="mt-12">
-      <SplitScreen leftWeight="w-1/3" rightWeight="flex-grow" >
+      <SplitScreen leftWeight="w-1/5" rightWeight="flex-grow" >
         <Left/>
         <Right/>
       </SplitScreen>

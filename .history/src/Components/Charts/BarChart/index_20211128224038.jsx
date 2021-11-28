@@ -2,16 +2,13 @@ import ReactApexChart from "react-apexcharts";
 
 const series = [
   {
-    data: [21, 22, 10, 28]
+    data: [21, 22, 10, 28, 16, 21, 13, 30]
   }
 ]
 
-
-    
-const BarChart = ({ width, color = '#F59E0B' }) => {
-  const options =
+const options =
 {
-  colors: [color],
+  colors: ['#F59E0B'],
   chart: {
     height: 50,
     type: 'bar',
@@ -32,9 +29,11 @@ const BarChart = ({ width, color = '#F59E0B' }) => {
     labels: {show: false}
   },  
 }
+    
+const BarChart = ({width}) => {
   return (
     <div id="chart">
-      <ReactApexChart options={options} series={series} type="bar" width={width} height={130} />
+      <ReactApexChart options={options} series={series} type="bar" height={130} />
     </div>
 
 

@@ -6,12 +6,9 @@ const series = [
   }
 ]
 
-
-    
-const BarChart = ({ width, color = '#F59E0B' }) => {
-  const options =
+const options =
 {
-  colors: [color],
+  colors: ['#F59E0B'],
   chart: {
     height: 50,
     type: 'bar',
@@ -32,6 +29,8 @@ const BarChart = ({ width, color = '#F59E0B' }) => {
     labels: {show: false}
   },  
 }
+    
+const BarChart = ({width, color='#F59E0B'}) => {
   return (
     <div id="chart">
       <ReactApexChart options={options} series={series} type="bar" width={width} height={130} />

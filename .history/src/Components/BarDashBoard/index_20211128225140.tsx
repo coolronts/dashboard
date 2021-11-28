@@ -2,7 +2,7 @@ import { ArrowUpRight } from '../Icons'
 import BarChart from '../Charts/BarChart'
 import Card from '../Card'
 
-const BarDashBoard: React.FC<{color?:string}> = ({color="#F6AC2F"}) => {
+const BarDashBoard: React.FC<{color?:string}> = ({color}) => {
   return (
     <div className="w-full">
       <Card Element={

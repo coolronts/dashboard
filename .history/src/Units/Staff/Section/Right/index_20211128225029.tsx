@@ -7,7 +7,7 @@ const Right: React.FC = () => {
         <BarDashboard color="#5DB1F8"/>
       </div>
       <div className="mr-1">
-        <BarDashboard color="#9568FF"/>
+        <BarDashboard />
       </div>
       <div className="mr-1">
         <BarDashboard />
