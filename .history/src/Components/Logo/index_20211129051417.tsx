@@ -37,7 +37,7 @@ const Logo: React.FC<IconProps> = ({ Icon, name, color }) => {
     } absolute -right-3 text-transparent`,
     overlay: `${
       active === name ? "opacity-30 " : "opacity-0"
-    } absolute bg-white w-12 h-12 rounded-full top-4 group-hover:opacity-30`,
+    } absolute bg-white  w-12 h-12 rounded-full top-4 group-hover:opacity-30`,
   };
 
   return (

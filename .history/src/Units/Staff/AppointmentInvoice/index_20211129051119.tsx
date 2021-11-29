@@ -1,7 +1,7 @@
 import AppointmentsTable from "./AppointmentsTable";
 import Card from "../../../Components/Card";
 import DropDown from "../../../Components/DropDown";
-import InvoiceTable from "./InvoicesTable";
+import InvoiceTable from "./InvoiceTable";
 import { useState } from "react";
 
 const AppointmentInvoice: React.FC = () => {

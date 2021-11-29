@@ -2,7 +2,6 @@ import { BsArrowDownShort, BsCalendar3 } from "react-icons/bs";
 
 import { AiOutlineSearch } from "react-icons/ai";
 import { AiOutlineSetting } from "react-icons/ai";
-import { BiDownload } from "react-icons/bi";
 import { BiShowAlt } from "react-icons/bi";
 import { DiJqueryLogo } from "react-icons/di";
 import { FiArrowUpRight } from "react-icons/fi";
@@ -27,5 +26,4 @@ export {
   FiArrowUpRight as ArrowUpRight,
   BsArrowDownShort as ArrowDown,
   BiShowAlt as Show,
-  BiDownload as Download,
 };
