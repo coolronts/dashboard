@@ -23,5 +23,4 @@ export {
   AiOutlineSearch as Search,
   IoIosNotifications as Notifications,
   FiArrowUpRight as ArrowUpRight,
-  BsArrowDownShort as ArrowDown,
 };

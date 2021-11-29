@@ -2,7 +2,7 @@ import { ArrowUpRight } from "../Icons";
 import BarChart from "../Charts/BarChart";
 import Card from "../Card";
 
-const BarDashBoard: React.FC<{ color?: string; size?: string }> = ({
+const BarDashBoard: React.FC<{ color?: string; size: string }> = ({
   color = "#F6AC2F",
   size = "sm",
 }) => {
@@ -12,7 +12,7 @@ const BarDashBoard: React.FC<{ color?: string; size?: string }> = ({
         Element={
           <div
             className={`${
-              size === "sm" ? "px-0" : "px-16"
+              size !== "sm" && "px-24"
             } font-semibold font-sans capitalize`}
           >
             <div className="px-1 ">

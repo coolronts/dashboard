@@ -10,7 +10,7 @@ const AppointmentInvoice: React.FC = () => {
     table: `bg-white mt-6 w-full divide-solid divide-y-2 divide-opacity-60 divide-gray-300 text-gray-700`,
   };
   const handleChoice = (e: any) => {
-    setChoice(e);
+    setChoice(e.target.value);
   };
   return (
     <>

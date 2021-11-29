@@ -12,12 +12,12 @@ const BarDashBoard: React.FC<{ color?: string; size?: string }> = ({
         Element={
           <div
             className={`${
-              size === "sm" ? "px-0" : "px-16"
+              size === "sm" && "px-12"
             } font-semibold font-sans capitalize`}
           >
             <div className="px-1 ">
               <div className="flex justify-between text-md text-gray-400 items-center">
-                <div className="text-left font-sans w-full">
+                <div className="text-left font-sans w-full bg-red-300">
                   <p
                     className="text-6xl font-semibold"
                     style={{ color: color }}

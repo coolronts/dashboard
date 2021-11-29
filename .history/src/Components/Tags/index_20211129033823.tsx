@@ -5,7 +5,7 @@ interface dataProps {
 
 const Tags: React.FC<dataProps> = ({ color, name }) => {
   const styles = {
-    body: `bg-${color}-100 text-${color}-500 ring-2 ring-${color}-300 rounded-md w-36 text-center py-1 text-xs font-bold font-sans`,
+    body: `bg-${color}-100 text-${color}-500 ring-2 ring-${color}-300 rounded-md w-48 text-center py-1 text-xs font-bold font-sans`,
   };
   return (
     <div className={styles.body}>

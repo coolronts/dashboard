@@ -10,7 +10,7 @@ const AppointmentInvoice: React.FC = () => {
     table: `bg-white mt-6 w-full divide-solid divide-y-2 divide-opacity-60 divide-gray-300 text-gray-700`,
   };
   const handleChoice = (e: any) => {
-    setChoice(e);
+    setChoice(e.target.value);
   };
   return (
     <>
@@ -30,9 +30,7 @@ const AppointmentInvoice: React.FC = () => {
                   </p>
                   <p
                     onClick={() => handleChoice("Invoices")}
-                    className={`${
-                      choice === "Invoices" && "border-blue-500"
-                    } mr-12 px-4 border-b-4 hover:border-blue-500 border-transparent cursor-pointer`}
+                    className="mr-12 px-4 border-b-4 hover:border-blue-500 border-transparent cursor-pointer"
                   >
                     Invoices
                   </p>
