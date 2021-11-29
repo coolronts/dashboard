@@ -17,7 +17,7 @@ const InvoicesTable: React.FC = () => {
   const headings = ["Date", "Invoice Id", "Amount", "Status", ""];
 
   const styles = {
-    header: "flex justify-between bg-gray-100 py-4 rounded-t-2xl mt-6",
+    header: "flex justify-between bg-gray-100 py-4 rounded-t-2xl",
     row: `flex text-sm items-center justify-between font-semibold font-sans tracking-tight py-3`,
   };
 

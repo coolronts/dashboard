@@ -16,11 +16,16 @@ const AppointmentInvoice: React.FC = () => {
           Element={
             <div className=" mb-4 font-semibold font-sans capitalize">
               <div className="px-6 mb-3">
-                <Tabs options={["Appointments", "Invoices"]}>
-                  <AppointmentsTable />
-                  <InvoiceTable />
-                </Tabs>
+                <Tabs options={["Appointments", "Invoices"]} />
+                <hr className="mb-6" />
+                <DropDown items={["All Time", "Last 7 days", "Last 30 days"]} />
               </div>
+              {/* <div className="mt-12 px-8">
+                <div className={styles.table}>
+                  {choice === "Appointments" && <AppointmentsTable />}
+                  {choice === "Invoices" && <InvoiceTable />}
+                </div>
+              </div> */}
             </div>
           }
         />

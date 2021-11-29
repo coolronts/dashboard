@@ -20,7 +20,15 @@ const AppointmentInvoice: React.FC = () => {
                   <AppointmentsTable />
                   <InvoiceTable />
                 </Tabs>
+                <hr className="mb-6" />
+                <DropDown items={["All Time", "Last 7 days", "Last 30 days"]} />
               </div>
+              {/* <div className="mt-12 px-8">
+                <div className={styles.table}>
+                  {choice === "Appointments" && <AppointmentsTable />}
+                  {choice === "Invoices" && <InvoiceTable />}
+                </div>
+              </div> */}
             </div>
           }
         />
