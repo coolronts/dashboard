@@ -10,7 +10,7 @@ const Tags: React.FC<dataProps> = ({ color, name }) => {
   };
   return (
     <div className={styles.body}>
-      <p className={styles.text}> {name}</p>
+      <p>{name}</p>
     </div>
   );
 };

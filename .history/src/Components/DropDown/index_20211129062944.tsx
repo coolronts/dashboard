@@ -7,7 +7,7 @@ interface DropDownProps {
 
 const DropDown: React.FC<DropDownProps> = ({ items }) => {
   const styles = {
-    body: "relative bg-white px-3 py-2 w-60 shadow rounded-2xl text-gray-400 ring-2 ring-gray-200",
+    body: "relative bg-white px-3 py-2 w-60 shadow rounded-2xl text-gray-400 ring-2 ring-gray-400",
     icon: "text-2xl p-1 bg-gray-200 rounded-full font-bold hover:bg-gray-300 hover:text-gray-600 cursor-pointer",
     optionsBody:
       "bg-gray-300 w-48 absolute top-12 rounded-xl shadow divide-y-2 divide-gray-400 ",
