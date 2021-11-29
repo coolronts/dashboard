@@ -28,13 +28,13 @@ const AppointmentsTable: React.FC = () => {
       {data.map((item, i) => (
         <div className={styles.row} key={i}>
           <div className="w-1/2 flex items-center">
-            <div className="w-1/6 text-center px-6 mr-6 ">
+            <div className="w-1/3 text-left px-2 mr-6">
               <p className="text-3xl text-gray-700">
                 {Math.floor(Math.random() * 30 + 1)}
               </p>
               <p className="text-gray-400">{item.month.substring(0, 3)}</p>
             </div>
-            <div className="text-left w-full">
+            <div className="text-left ml-6">
               <p className=" text-base">{item.meet}</p>
               <p className="text-gray-400 italic">12:00 - 13:00</p>
             </div>

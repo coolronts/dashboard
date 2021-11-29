@@ -28,14 +28,16 @@ const Logo: React.FC<IconProps> = ({ Icon, name, color }) => {
       active === name ? "text-white" : "text-gray-800"
     } group-hover:text-white capitalize text-sm font-semibold mt-4`,
     icon: `${
-      active === name ? "bg-blue-primary text-white" : `text-${color}-900`
+      active === name
+        ? "bg-blue-primary text-white"
+        : `bg-${color}-100 text-${color}-900`
     } rounded-full p-3 group-hover:bg-blue-primary group-hover:text-white`,
     arrowRight: `${
       active === name ? "text-blue-primary" : "text-transparent"
     } absolute -right-3 text-transparent`,
     overlay: `${
-      active === name ? `` : "bg-white"
-    } absolute opacity-30 bg-${color}-500 w-12 h-12 rounded-full top-4 group-hover:opacity-30`,
+      active === name ? `bg-${color}-500` : "bg-white"
+    } absolute opacity-30  w-12 h-12 rounded-full top-4 group-hover:opacity-30`,
   };
 
   return (
