@@ -8,7 +8,7 @@ import { SectionHeader } from "./Units/Shared";
 
 function App() {
   const styles = {
-    leftDrawer: "bg-white px-8 rounded-tr-3xl py-8 w-42 shadow-lg",
+    leftDrawer: "bg-white px-8 rounded-tr-3xl py-8 w-42 shadow",
   };
   return (
     <BrowserRouter>

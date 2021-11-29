@@ -13,7 +13,7 @@ import Logo from "../../../Components/Logo";
 const LeftDrawer: React.FC = () => {
   const styles = {
     CompanyLogo: "text-5xl text-blue-900 w-full mb-12",
-    menu: "flex flex-col justify-between bg-blue.primary",
+    menu: "flex flex-col justify-between bg-blue.primary overflow-x-hidden overflow-y-scroll scrollbar scrollbar-thumb-gray-900 scrollbar-track-gray-100",
   };
   const icons = [
     { Icon: <Overview />, name: "overview", color: "blue" },

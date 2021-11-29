@@ -25,7 +25,7 @@ const LeftDrawer: React.FC = () => {
   ];
 
   return (
-    <div className="m-auto">
+    <div className="m-auto shadow-2xl">
       <CompanyLogo className={styles.CompanyLogo} />
       <div className={styles.menu}>
         {icons.map((icon) => (
