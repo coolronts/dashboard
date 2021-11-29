@@ -29,21 +29,17 @@ const Logo: React.FC<IconProps> = ({ Icon, name, color }) => {
     } group-hover:text-white capitalize text-sm font-semibold mt-4`,
     icon: `${
       active === name
-        ? "bg-blue-primary text-white"
+        ? "bg-white opacity-50 text-white"
         : `bg-${color}-100 text-${color}-900`
     } rounded-full p-3 group-hover:bg-blue-primary group-hover:text-white`,
     arrowRight: `${
       active === name ? "text-blue-primary" : "text-transparent"
     } absolute -right-3 text-transparent`,
-    overlay: `${
-      active === name ? "opacity-30 " : "opacity-0"
-    } absolute bg-white  w-12 h-12 rounded-full top-4 group-hover:opacity-30`,
   };
 
   return (
     <Link to={`/${name}`}>
       <div className={styles.body}>
-        <div className={styles.overlay} />
         <div className={styles.icon}> {Icon} </div>
         <p className={styles.name}> {name} </p>
         <ArrowRight className={styles.arrowRight} />

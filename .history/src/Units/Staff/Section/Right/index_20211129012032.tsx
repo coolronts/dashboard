@@ -1,4 +1,3 @@
-import AppointmentInvoice from "../../AppointmentInvoice";
 import BarDashboard from "../../../../Components/BarDashBoard";
 
 const Right: React.FC = () => {
@@ -15,7 +14,6 @@ const Right: React.FC = () => {
           <BarDashboard />
         </div>
       </div>
-      <AppointmentInvoice />
     </>
   );
 };

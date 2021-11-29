@@ -4,7 +4,7 @@ interface RoundIconButtonProps {
 
 const RoundIcon: React.FC<RoundIconButtonProps> = ({ Icon }) => {
   const styles = {
-    icon: "ring-2 flex items-center justify-center ring-gray-300 text-2xl w-10 h-10 font-bold p-2 bg-white rounded-full mx-6 shadow text-gray-400 cursor-pointer hover:shadow-2xl",
+    icon: "ring-2 flex items-center justify-center ring-gray-300 text-2xl w-12 h-12 font-bold p-2 bg-white rounded-full mx-6 shadow text-gray-400 cursor-pointer hover:shadow-2xl",
   };
   return (
     <div className={styles.icon}>

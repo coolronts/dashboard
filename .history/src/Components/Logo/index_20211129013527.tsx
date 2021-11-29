@@ -35,15 +35,12 @@ const Logo: React.FC<IconProps> = ({ Icon, name, color }) => {
     arrowRight: `${
       active === name ? "text-blue-primary" : "text-transparent"
     } absolute -right-3 text-transparent`,
-    overlay: `${
-      active === name ? "opacity-30 " : "opacity-0"
-    } absolute bg-white  w-12 h-12 rounded-full top-4 group-hover:opacity-30`,
   };
 
   return (
     <Link to={`/${name}`}>
       <div className={styles.body}>
-        <div className={styles.overlay} />
+        <div className="absolute bg-white opacity-50 w-12 h-12 rounded-full top-4" />
         <div className={styles.icon}> {Icon} </div>
         <p className={styles.name}> {name} </p>
         <ArrowRight className={styles.arrowRight} />
