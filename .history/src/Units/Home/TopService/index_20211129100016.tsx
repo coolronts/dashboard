@@ -11,7 +11,7 @@ const TopService: React.FC = () => {
   const [data, setData] = useState<dataProps[]>([]);
   const styles = {
     table: `bg-white w-full divide-solid divide-y-2 divide-opacity-60 divide-gray-300 text-gray-700`,
-    row: `flex py-3 text-sm items-center font-semibold font-sans tracking-tight justify-between`,
+    row: `flex py-3 text-sm items-center font-semibold font-sans tracking-tight py-2 justify-between`,
   };
 
   if (data.length === 0) {

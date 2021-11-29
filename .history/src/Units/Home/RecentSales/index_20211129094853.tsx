@@ -1,13 +1,13 @@
 import Card from "../../../Components/Card";
-import MultiLine from "../../../Components/Charts/MultiLine";
+import MultiColumn from "../../../Components/Charts/MultiColumn";
 import Tabs from "../../../Components/Tabs";
 
-const AppointmentActivity: React.FC = () => {
+const RecentSales: React.FC = () => {
   return (
-    <div>
+    <div className="mb-6">
       <Card
         isHeader={true}
-        title="Appointment Activity"
+        title="Recent Sales"
         subtitle="Last 30 days"
         Element={
           <Tabs
@@ -15,9 +15,9 @@ const AppointmentActivity: React.FC = () => {
             isBox={true}
             options={["All-Time", "Last 7 Days", "Last 30 Days"]}
           >
-            <MultiLine />
-            <MultiLine />
-            <MultiLine />
+            <MultiColumn />
+            <MultiColumn />;
+            <MultiColumn />;
           </Tabs>
         }
       />
@@ -25,4 +25,4 @@ const AppointmentActivity: React.FC = () => {
   );
 };
 
-export default AppointmentActivity;
+export default RecentSales;

@@ -4,24 +4,23 @@ interface dataProps {
   options: string[];
   children: React.ReactNode[];
   isBox?: boolean;
-  horizontalPosition?: "start" | "center" | "end";
+  horizontalPosition?: "left" | "center" | "right";
 }
 
+const styles = {
+  tabs: "flex text-md text-gray-400 pt-1 items-center",
+  selected: "border-blue-500 font-bold text-gray-600",
+  tab: "mr-12 px-4 border-b-4 hover:border-blue-500 border-transparent cursor-pointer",
+  boxTab:
+    "bg-transparent px-2 py-1 ring-1 ring-gray-300 cursor-pointer hover:shadow-lg shadow  text-gray-700 ml-4 rounded text-md font-semibold font-sans tracking-tight",
+  boxSelected: "bg-gray-200",
+};
 const Tabs: React.FC<dataProps> = ({
   options,
   children,
   isBox = false,
-  horizontalPosition = "start",
+  horizontalPosition = "left",
 }) => {
-  const styles = {
-    tabs: `flex text-md text-gray-400 mb-6 items-center justify-${horizontalPosition}`,
-    selected: "border-blue-500 font-bold text-gray-600",
-    tab: "mr-12 px-4 border-b-4 hover:border-blue-500 border-transparent cursor-pointer",
-    boxTab:
-      "bg-transparent px-2 py-1 ring-1 ring-gray-300 cursor-pointer hover:shadow-lg shadow  text-gray-700 ml-4 rounded text-md font-semibold font-sans tracking-tight",
-    boxSelected: "bg-gray-200",
-  };
-
   const [selected, setSelected] = useState<string>(options[0]);
   const handleChoice = (option: string) => {
     setSelected(option);

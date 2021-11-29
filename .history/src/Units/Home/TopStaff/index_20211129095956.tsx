@@ -1,5 +1,6 @@
 import Avatar from "../../../Components/Avatar";
 import Card from "../../../Components/Card";
+import CardHeader from "../../../Components/CardHeader";
 import createRandomData from "../../../api/TopStaff";
 import { useState } from "react";
 
@@ -25,7 +26,7 @@ const TopStaff: React.FC = () => {
       subtitle="Current month"
       size="sm"
       Element={
-        <div className="px-2">
+        <div className="px-6">
           <div className={styles.table}>
             {data.map((item, i) => (
               <div className={styles.row} key={i}>

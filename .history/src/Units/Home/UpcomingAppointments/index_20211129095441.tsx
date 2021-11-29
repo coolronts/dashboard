@@ -1,4 +1,5 @@
 import Card from "../../../Components/Card";
+import CardHeader from "../../../Components/CardHeader";
 import createRandomData from "../../../api/Upcoming";
 import { useState } from "react";
 
@@ -23,10 +24,11 @@ const UpcomingAppointments: React.FC = () => {
   return (
     <Card
       isHeader={true}
-      title="Upcoming Appointments"
-      subtitle="Current month"
+      title="Appointment Activity"
+      subtitle="Last 30 days"
       Element={
         <div className="px-2">
+          <CardHeader title="Upcoming Appointments" subtitle="Current month" />
           <div className={styles.table}>
             {data.map((item, i) => (
               <div className={styles.row} key={i}>

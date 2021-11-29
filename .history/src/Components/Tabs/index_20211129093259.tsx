@@ -4,17 +4,17 @@ interface dataProps {
   options: string[];
   children: React.ReactNode[];
   isBox?: boolean;
-  horizontalPosition?: "start" | "center" | "end";
+  horizontalPosition?: "left" | "center" | "right";
 }
 
 const Tabs: React.FC<dataProps> = ({
   options,
   children,
   isBox = false,
-  horizontalPosition = "start",
+  horizontalPosition = "left",
 }) => {
   const styles = {
-    tabs: `flex text-md text-gray-400 mb-6 items-center justify-${horizontalPosition}`,
+    tabs: `flex text-md text-gray-400 pt-1 items-center justify-${horizontalPosition}`,
     selected: "border-blue-500 font-bold text-gray-600",
     tab: "mr-12 px-4 border-b-4 hover:border-blue-500 border-transparent cursor-pointer",
     boxTab:

@@ -24,7 +24,6 @@ const TopService: React.FC = () => {
       isHeader={true}
       title="Top Service"
       subtitle="Current month"
-      size="sm"
       Element={
         <div className="">
           <div className={styles.table}>

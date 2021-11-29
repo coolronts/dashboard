@@ -11,7 +11,7 @@ const TopService: React.FC = () => {
   const [data, setData] = useState<dataProps[]>([]);
   const styles = {
     table: `bg-white w-full divide-solid divide-y-2 divide-opacity-60 divide-gray-300 text-gray-700`,
-    row: `flex py-3 text-sm items-center font-semibold font-sans tracking-tight justify-between`,
+    row: `flex py-3 text-sm items-center font-semibold font-sans tracking-tight py-2 justify-between`,
   };
 
   if (data.length === 0) {
@@ -26,7 +26,7 @@ const TopService: React.FC = () => {
       subtitle="Current month"
       size="sm"
       Element={
-        <div className="">
+        <div className="px-2">
           <div className={styles.table}>
             {data.map((item, i) => (
               <div className={styles.row} key={i}>

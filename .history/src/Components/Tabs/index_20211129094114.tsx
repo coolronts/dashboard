@@ -14,7 +14,7 @@ const Tabs: React.FC<dataProps> = ({
   horizontalPosition = "start",
 }) => {
   const styles = {
-    tabs: `flex text-md text-gray-400 mb-6 items-center justify-${horizontalPosition}`,
+    tabs: `flex text-md text-gray-400 mb-3 items-center justify-${horizontalPosition}`,
     selected: "border-blue-500 font-bold text-gray-600",
     tab: "mr-12 px-4 border-b-4 hover:border-blue-500 border-transparent cursor-pointer",
     boxTab:

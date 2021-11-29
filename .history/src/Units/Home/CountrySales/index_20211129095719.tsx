@@ -1,4 +1,5 @@
 import Card from "../../../Components/Card";
+import CardHeader from "../../../Components/CardHeader";
 import Map from "../../../Components/Map";
 
 const sale = [

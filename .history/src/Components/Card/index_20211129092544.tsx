@@ -19,7 +19,7 @@ const Card: React.FC<CardProps> = ({
     body: `bg-white px-6 py-8 rounded-2xl shadow ${
       size === "sm" ? "w-3/6" : "w-full"
     }`,
-    header: "font-semibold font-sans px-4",
+    header: "font-semibold font-sans mb-6 px-6",
     title: "tracking-tighter text-xl text-gray-700 capitalize",
     subtitle: "text-md text-gray-400",
   };
