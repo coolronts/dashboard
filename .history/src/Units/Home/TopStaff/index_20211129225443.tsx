@@ -18,15 +18,15 @@ const TopStaff: React.FC = () => {
   if (data.length === 0) {
     createRandomData(5)
       .then((response) => {
-        response.map((item) => {
+        response.map((item, i) => {
           return newData.push(
-            <div className={styles.row} key={item.name}>
+            <div className={styles.row} key={i}>
               <div className={styles.col1}>
                 <Avatar img={item.avatar} />
                 <p className={styles.name}>{item.name}</p>
               </div>
               <div className={styles.col2}>
-                <p>Nok {item.price}</p>
+                <p className="">Nok {item.price}</p>
               </div>
             </div>
           );

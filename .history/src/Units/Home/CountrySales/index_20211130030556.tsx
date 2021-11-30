@@ -41,11 +41,11 @@ const sale: saleData[] = [
 
 const CountrySales: React.FC = () => {
   const styles = {
-    row: `flex py-3 w-full text-base items-center font-semibold font-sans tracking-tight py-2 justify-between`,
-    col1: "w-1/3 text-left",
-    col2: "w-full px-2 text-center relative",
+    row: `flex py-3 w-full text-sm items-center font-semibold font-sans tracking-tight py-2 justify-between`,
+    col1: "w-1/3",
+    col2: "w-full px-2 text-center items-center",
     progressBar: "bg-gray-200 h-2.5 rounded-full",
-    blueBar: "bg-blue-600 h-2.5 rounded-full absolute top-0",
+    blueBar: "bg-blue-600 h-2.5 rounded-full",
     col3: "w-1/3 text-right text-gray-400",
   };
   const data = sort(sale, "sale", "desc");
@@ -68,11 +68,11 @@ const CountrySales: React.FC = () => {
   });
 
   return (
-    <div className="my-6">
+    <div className="mt-6">
       <Card isHeader={true} title="Sales by Country" subtitle="Current month">
         <div>
           <Map />
-          <Table border={false}>{Element}</Table>
+          <Table>{Element}</Table>
         </div>
       </Card>
     </div>

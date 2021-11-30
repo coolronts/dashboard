@@ -68,11 +68,11 @@ const CountrySales: React.FC = () => {
   });
 
   return (
-    <div className="my-6">
+    <div className="mt-6">
       <Card isHeader={true} title="Sales by Country" subtitle="Current month">
         <div>
           <Map />
-          <Table border={false}>{Element}</Table>
+          <Table>{Element}</Table>
         </div>
       </Card>
     </div>

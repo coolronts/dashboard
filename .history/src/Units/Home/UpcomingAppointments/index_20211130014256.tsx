@@ -14,7 +14,7 @@ const UpcomingAppointments: React.FC = () => {
     appointment: "text-left ml-6",
     meet: "text-base",
     time: "text-gray-400 italic",
-    col2: "flex-shrink text-right",
+    col2: "flex-shrink bg-red-300 text-right",
     wage: "text-gray-400",
   };
   const [data, setData] = useState<ReactNode[]>([]);

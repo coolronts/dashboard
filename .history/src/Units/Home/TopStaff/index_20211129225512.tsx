@@ -26,7 +26,7 @@ const TopStaff: React.FC = () => {
                 <p className={styles.name}>{item.name}</p>
               </div>
               <div className={styles.col2}>
-                <p>Nok {item.price}</p>
+                <p className="">Nok {item.price}</p>
               </div>
             </div>
           );

@@ -34,7 +34,10 @@ const Table: React.FC<TableProps> = ({
     throw new Error("Table requires either headings or data or children");
   }
 
-  useEffect(() => {}, [children, headings, data]);
+  useEffect(() => {
+    console.log("Table not rendered");
+    console.log(children, "children");
+  }, [children, headings, data]);
 
   return (
     <div>

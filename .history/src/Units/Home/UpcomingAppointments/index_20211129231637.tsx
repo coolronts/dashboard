@@ -1,20 +1,29 @@
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode, useState } from "react";
 
 import Card from "../../../Components/Card";
 import Table from "../../../Components/Table";
 import createRandomData from "../../../api/Upcoming";
 
+interface dataProps {
+  month: string;
+  time: string;
+  wage: number;
+  price: number;
+  meet: string;
+}
+
 const UpcomingAppointments: React.FC = () => {
   const styles = {
-    row: `flex justify-between w-full text-sm items-center font-semibold font-sans tracking-tight py-2`,
-    col1: "flex-grow flex items-center",
+    table: `bg-white mt-6 w-full divide-solid divide-y-2 divide-opacity-60 divide-gray-300 text-gray-700`,
+    row: `flex text-sm items-center font-semibold font-sans tracking-tight py-2`,
+    col1: "w-2/3 flex items-center",
     date: "text-center",
     day: "text-3xl text-gray-700",
     month: "text-gray-400",
     appointment: "text-left ml-6",
     meet: "text-base",
     time: "text-gray-400 italic",
-    col2: "flex-shrink text-right",
+    amount: "w-1/3 text-right",
     wage: "text-gray-400",
   };
   const [data, setData] = useState<ReactNode[]>([]);
@@ -38,7 +47,7 @@ const UpcomingAppointments: React.FC = () => {
                   <p className={styles.time}> 12:00 - 13:00 </p>
                 </div>
               </div>
-              <div className={styles.col2}>
+              <div className={styles.amount}>
                 <p>Nok {item.price}</p>
                 <p className={styles.wage}> {item.wage} Nok/hr </p>
               </div>
@@ -48,7 +57,6 @@ const UpcomingAppointments: React.FC = () => {
       })
       .then(() => setData(responseDataStack));
   }
-  useEffect(() => {}, [data]);
 
   return (
     <Card
@@ -56,7 +64,7 @@ const UpcomingAppointments: React.FC = () => {
       title="Upcoming Appointments"
       subtitle="Current month"
     >
-      <Table border={false}>{data}</Table>
+      <Table>{data}</Table>
     </Card>
   );
 };

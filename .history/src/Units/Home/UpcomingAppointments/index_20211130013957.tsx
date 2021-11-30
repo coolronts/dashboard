@@ -6,15 +6,16 @@ import createRandomData from "../../../api/Upcoming";
 
 const UpcomingAppointments: React.FC = () => {
   const styles = {
-    row: `flex justify-between w-full text-sm items-center font-semibold font-sans tracking-tight py-2`,
-    col1: "flex-grow flex items-center",
+    table: `bg-white mt-6 w-full divide-solid divide-y-2 divide-opacity-60 divide-gray-300 text-gray-700`,
+    row: `flex justify-between text-sm items-center font-semibold font-sans tracking-tight py-2`,
+    col1: "w-2/3 flex items-center",
     date: "text-center",
     day: "text-3xl text-gray-700",
     month: "text-gray-400",
     appointment: "text-left ml-6",
     meet: "text-base",
     time: "text-gray-400 italic",
-    col2: "flex-shrink text-right",
+    col2: "w-full text-right",
     wage: "text-gray-400",
   };
   const [data, setData] = useState<ReactNode[]>([]);
