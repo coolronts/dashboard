@@ -9,10 +9,11 @@ completedColumns:
 
 ## Backlog
 
-- [staff-page](tasks/staff-page.md)
 - [staff-api](tasks/staff-api.md)
 
 ## Todo
+
+- [staff-page](tasks/staff-page.md)
 
 ## In Progress
 
