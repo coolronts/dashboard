@@ -1,0 +1,20 @@
+import { ArrowRight, ArrowLeft } from "../Icons";
+
+const Pagination: React.FC = () => {
+  const styles = {
+    body: "bg-white relative px-3 h-20 shadow rounded-2xl text-gray-400",
+  };
+  return (
+    <div className={styles.body}>
+      <div className="flex justify-between items-center">
+        <div className="flex items-center">
+          <ArrowLeft />
+          <span className="ml-2">1</span>
+          <ArrowRight />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Pagination;

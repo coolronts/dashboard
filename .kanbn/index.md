@@ -9,19 +9,18 @@ completedColumns:
 
 ## Backlog
 
-- [staff-api](tasks/staff-api.md)
-
 ## Todo
 
-- [staff-page](tasks/staff-page.md)
+- [staff-api](tasks/staff-api.md)
 
 ## In Progress
 
-- [api-fix](tasks/api-fix.md)
+- [staff-page](tasks/staff-page.md)
 
 ## Done
 
 - [tags](tasks/tags.md)
+- [api-fix](tasks/api-fix.md)
 - [appointments-table](tasks/appointments-table.md)
 - [tags-icons](tasks/tags-icons.md)
 - [random-number-done](tasks/random-number-done.md)
