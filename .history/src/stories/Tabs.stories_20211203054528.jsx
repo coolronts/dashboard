@@ -6,7 +6,7 @@ export default {
   component: Tabs,
 };
 const Template = (args) =>
-  <div className="grid place-contents-center">
+  <div className="grid place-items-center">
     <Tabs {...args} />
   </div>
 

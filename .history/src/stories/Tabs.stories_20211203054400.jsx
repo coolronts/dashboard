@@ -6,9 +6,9 @@ export default {
   component: Tabs,
 };
 const Template = (args) =>
-  <div className="grid place-contents-center">
+  <Center>
     <Tabs {...args} />
-  </div>
+  </Center>;
 
 export const TabsButton = Template.bind({});
 TabsButton.args = {
