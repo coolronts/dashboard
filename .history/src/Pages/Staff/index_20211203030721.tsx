@@ -20,10 +20,6 @@ const Staff: React.FC = () => {
   const [schedule, setSchedule] = useState<React.ReactNode[]>();
   const [showModal, setShowModal] = useState(false);
   const [usersData, setUsersData] = useState<React.ReactNode[]>();
-
-  const handleModal = () => {
-    setShowModal(!showModal);
-  };
   if (!usersData) {
     getUserApi(5)
       .then((users) => {
@@ -68,10 +64,7 @@ const Staff: React.FC = () => {
                 {item.schedule.map((schedule: any, index: number) => (
                   <div className="w-full text-lg flex flex-col justify-between items-center ">
                     {schedule.time.map((time: any, index: number) => (
-                      <div
-                        className="my-2 cursor-pointer"
-                        onClick={() => handleModal()}
-                      >
+                      <div className="my-2">
                         <Tags
                           color={
                             time.period.toLowerCase() === "closed"
@@ -95,14 +88,9 @@ const Staff: React.FC = () => {
       .catch((err) => console.log(err));
   }
 
-  useEffect(() => {}, [schedule, usersData, showModal]);
+  useEffect(() => {}, [schedule, usersData]);
   return (
     <div>
-      {showModal && (
-        <Modal handleModal={handleModal}>
-          <div>Hello</div>
-        </Modal>
-      )}
       {usersData && (
         <>
           <div className="pb-8 ">
@@ -113,7 +101,7 @@ const Staff: React.FC = () => {
             </Tabs>
           </div>
           <div className="flex justify-between items-center text-gray-600 font-sans mt-6  ">
-            <div className="w-1/3">
+            <div className="w-1/3 flex items-center">
               <DropDown items={usersData} />
             </div>
 
@@ -155,8 +143,8 @@ const Staff: React.FC = () => {
           )}
         </>
       )}
-      <div className="flex justify-between items-center ">
-        <div className="w-24 flex items-center">
+      <div className="flex justify-between items-center">
+        <div className="w-32 flex items-center">
           <DropDown items={[10, 20, 30]} />
         </div>
         <div className="w-1/4">

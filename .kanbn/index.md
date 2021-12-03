@@ -16,16 +16,18 @@ completedColumns:
 ## Todo
 
 - [service-page](tasks/service-page.md)
+- [table-responsive](tasks/table-responsive.md)
 
 ## In Progress
 
 - [staff-page](tasks/staff-page.md)
-- [modal](tasks/modal.md)
+- [story-book-components](tasks/story-book-components.md)
 
 ## Done
 
 - [tags](tasks/tags.md)
 - [api-fix](tasks/api-fix.md)
+- [modal](tasks/modal.md)
 - [staff-api](tasks/staff-api.md)
 - [appointments-table](tasks/appointments-table.md)
 - [tags-icons](tasks/tags-icons.md)

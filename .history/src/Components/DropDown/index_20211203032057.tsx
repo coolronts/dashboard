@@ -24,7 +24,7 @@ const DropDown: React.FC<DropDownProps> = ({ items }) => {
     setIsOpen(!isOpen);
   };
   return (
-    <div className="relative w-full">
+    <div className="relative">
       <div className={styles.body}>
         <div className="filter drop-shadow-sm w-full h-full flex justify-between items-center ">
           <p className="w-full text-xl">{selected}</p>

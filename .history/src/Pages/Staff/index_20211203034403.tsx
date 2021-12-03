@@ -155,10 +155,8 @@ const Staff: React.FC = () => {
           )}
         </>
       )}
-      <div className="flex justify-between items-center ">
-        <div className="w-24 flex items-center">
-          <DropDown items={[10, 20, 30]} />
-        </div>
+      <div className="flex justify-between items-center">
+        <DropDown items={[10, 20, 30]} />
         <div className="w-1/4">
           <Pagination items={50} showItems={10} />
         </div>

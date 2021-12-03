@@ -1,6 +1,5 @@
 import { Primary, RoundIcon } from "../Components/Buttons";
 
-import Center from './Center';
 import { Notifications } from "../Components/Icons";
 
 export default {
@@ -10,9 +9,9 @@ export default {
 };
 
 const Template = (args) => (
-  <Center>
+  <div className="grid w-full h-full place-items-center"> 
     <Primary {...args} />
-  </Center>
+  </div>
 );
 
 export const PrimaryButton = Template.bind({});
@@ -22,10 +21,12 @@ PrimaryButton.args = {
 };
 
 
+const Template2 = (args) => <RoundIcon {...args} />;
 
-export const RoundIconButton = () =>
-  <Center>
-    <RoundIcon Icon={<Notifications/>} />
-  </Center>;
+export const RoundIconButton = Template2.bind({});
 
+RoundIconButton.args = {
+  name: "RoundIcon",
+  icon: <Notifications />
+};
 

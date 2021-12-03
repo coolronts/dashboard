@@ -4,10 +4,7 @@ export default {
   title: "Card",
   component: Card,
 }
-const Template = (args) => (
-  
-  <Card {...args} />
-)
+const Template = (args) => <Card {...args} />;
 
 export const SampleCard = Template.bind({});
 SampleCard.args = {

@@ -1,7 +1,11 @@
 import { Primary, RoundIcon } from "../Components/Buttons";
 
-import Center from './Center';
 import { Notifications } from "../Components/Icons";
+
+export const PrimaryButton = () => <Primary name="Primary" />;
+export const RoundIconButton = () => <RoundIcon Icon={<Notifications />} />;
+
+
 
 export default {
   title: "Buttons",
@@ -9,23 +13,10 @@ export default {
   RoundIcon,
 };
 
-const Template = (args) => (
-  <Center>
-    <Primary {...args} />
-  </Center>
-);
+const Template = (args) => <Primary {...args} />;
 
 export const PrimaryButton = Template.bind({});
 
 PrimaryButton.args = {
   name: "Primary"
 };
-
-
-
-export const RoundIconButton = () =>
-  <Center>
-    <RoundIcon Icon={<Notifications/>} />
-  </Center>;
-
-

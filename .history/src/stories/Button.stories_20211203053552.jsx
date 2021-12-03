@@ -22,10 +22,12 @@ PrimaryButton.args = {
 };
 
 
+const Template2 = (args) => <RoundIcon {...args} />;
 
-export const RoundIconButton = () =>
-  <Center>
-    <RoundIcon Icon={<Notifications/>} />
-  </Center>;
+export const RoundIconButton = Template2.bind({});
 
+RoundIconButton.args = {
+  name: "RoundIcon",
+  icon: <Notifications />
+};
 

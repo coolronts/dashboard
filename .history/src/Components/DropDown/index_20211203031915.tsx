@@ -7,7 +7,7 @@ interface DropDownProps {
 
 const DropDown: React.FC<DropDownProps> = ({ items }) => {
   const styles = {
-    body: "bg-white w-full relative px-3 h-16 shadow rounded-2xl text-gray-400",
+    body: "bg-white w-64 relative px-3 h-16 shadow rounded-2xl text-gray-400",
     icon: "text-2xl p-1 bg-gray-200 rounded-full font-bold hover:bg-gray-300 hover:text-gray-600 cursor-pointer",
     optionsBody:
       "absolute bg-gray-50 border-b-2 border-r-2 border-l-2 border-gray-600 rounded-b-xl divide-y-2 divide-gray-400",
@@ -24,7 +24,7 @@ const DropDown: React.FC<DropDownProps> = ({ items }) => {
     setIsOpen(!isOpen);
   };
   return (
-    <div className="relative w-full">
+    <div className="relative" style={{ width: "40vh" }}>
       <div className={styles.body}>
         <div className="filter drop-shadow-sm w-full h-full flex justify-between items-center ">
           <p className="w-full text-xl">{selected}</p>

@@ -23,9 +23,6 @@ PrimaryButton.args = {
 
 
 
-export const RoundIconButton = () =>
-  <Center>
-    <RoundIcon Icon={<Notifications/>} />
-  </Center>;
+export const RoundIconButton = () =><RoundIcon icon={<Notifications/>} />
 
 

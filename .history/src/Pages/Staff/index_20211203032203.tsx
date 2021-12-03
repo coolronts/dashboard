@@ -68,10 +68,7 @@ const Staff: React.FC = () => {
                 {item.schedule.map((schedule: any, index: number) => (
                   <div className="w-full text-lg flex flex-col justify-between items-center ">
                     {schedule.time.map((time: any, index: number) => (
-                      <div
-                        className="my-2 cursor-pointer"
-                        onClick={() => handleModal()}
-                      >
+                      <div className="my-2" onClick={() => handleModal()}>
                         <Tags
                           color={
                             time.period.toLowerCase() === "closed"
@@ -155,8 +152,8 @@ const Staff: React.FC = () => {
           )}
         </>
       )}
-      <div className="flex justify-between items-center ">
-        <div className="w-24 flex items-center">
+      <div className="flex justify-between items-center">
+        <div className="w-32 flex items-center">
           <DropDown items={[10, 20, 30]} />
         </div>
         <div className="w-1/4">

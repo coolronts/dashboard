@@ -5,8 +5,9 @@ export default {
   component: Card,
 }
 const Template = (args) => (
-  
-  <Card {...args} />
+  <div className="container grid place-content-center">
+    <Card {...args} />
+  </div>
 )
 
 export const SampleCard = Template.bind({});
