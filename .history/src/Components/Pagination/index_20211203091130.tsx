@@ -14,7 +14,7 @@ const Pagination: React.FC<props> = ({ items, showItems }) => {
   const styles = {
     body: "bg-white relative px-3 h-16 shadow rounded-2xl text-gray-400",
     icon: "rounded-full bg-gray-200 p-1 text-4xl shadow cursor-pointer",
-    item: `rounded-full bg-gray-200 flex items-center justify-center h-8 w-8 text-lg cursor-pointer shadow mx-2`,
+    item: `rounded-full bg-gray-200 flex items-center justify-center h-8 w-8 text-lg cursor-pointer shadow`,
   };
 
   return (
@@ -23,6 +23,7 @@ const Pagination: React.FC<props> = ({ items, showItems }) => {
         <ArrowLeft className={`${styles.icon} "text-4xl"`} />
         {[...Array(Math.ceil(items / showItems))].map((item, i) => (
           <span
+            key={i}
             className={`${styles.item} ${
               currentPage - 1 === i ? "bg-blue-400 text-white" : ""
             } `}
