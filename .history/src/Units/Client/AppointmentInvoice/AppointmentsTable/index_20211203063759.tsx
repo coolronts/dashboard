@@ -59,6 +59,7 @@ const AppointmentsTable: React.FC = () => {
                 : "red"
             }
           />
+
           <div className={styles.col3}>
             <p className="">Nok {item.price}</p>
             <p className="text-gray-400">{item.wage} Nok/hr</p>
@@ -70,9 +71,10 @@ const AppointmentsTable: React.FC = () => {
   return (
     <>
       <hr className="mb-6" />
-      <div className="w-1/4">
+      <div>
         <DropDown items={["All Time", "Last 7 days", "Last 30 days"]} />;
       </div>
+
       <div className="mt-6" />
       <Table>{tableRows}</Table>
     </>

@@ -59,6 +59,7 @@ const AppointmentsTable: React.FC = () => {
                 : "red"
             }
           />
+
           <div className={styles.col3}>
             <p className="">Nok {item.price}</p>
             <p className="text-gray-400">{item.wage} Nok/hr</p>
