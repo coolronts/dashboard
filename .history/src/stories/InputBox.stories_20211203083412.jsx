@@ -30,7 +30,7 @@ const Template2 = (args) => (
   </Center>
 )
 
-export const DisableWithLabelInput = Template2.bind({});
+export const DisableWithLabelInput = Template.bind({});
 
 DisableWithLabelInput.args = {
   label: "I am Label",

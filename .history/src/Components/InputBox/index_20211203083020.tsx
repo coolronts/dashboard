@@ -6,9 +6,9 @@ type props = {
 
 const SearchBox: React.FC<props> = ({ placeholder = "Search" }) => {
   const styles = {
-    body: "relative",
+    body: "relative max-width: max-content bg-red-400",
     textBox:
-      "bg-gray-200 w-full rounded-lg py-3 px-4 font-semibold text-sm focus:ring-2 ring-gray-600 outline-none",
+      "bg-gray-200 w-64 rounded-lg py-3 px-4 font-semibold text-sm focus:ring-2 ring-gray-600 outline-none",
     searchIcon: "absolute right-2 top-3 text-xl",
   };
 
