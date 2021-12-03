@@ -19,15 +19,13 @@ const Table: React.FC<TableProps> = ({
 }) => {
   const styles = {
     header:
-      "flex justify-even bg-gray-100 py-4 rounded-t-3xl font-sans text-center items-center w-full  px-3",
+      "flex justify-even bg-gray-100 py-4 rounded-t-3xl font-sans text-center items-center w-full px-3",
     columnTitle: `text-lg text-gray-500 capitalize font-semibold w-full `,
     body: `w-full h-full divide-solid divide-y divide-gray-300 divide-opacity-60 border-gray-200  ${
       border && "border-2 px-2"
     }  `,
     row: `flex text-sm items-center text-center font-semibold font-sans tracking-tight flex justify-between`,
-    text: `text-base text-gray-500 py-4 ${
-      headings && `w-1/${headings.length}`
-    }`,
+    text: `text-base text-gray-500 py-4`,
   };
   if (!headings && !data && !children) {
     throw new Error("Table requires either headings or data or children");

@@ -1,8 +1,6 @@
-import Avatar from "../../../Components/Avatar";
-import Card from "../../../Components/Card";
+import { Avatar, Card, PrimaryButton, Tags } from "../../../Components";
+
 import { DisabledInputWithLabel } from "../../../Components/InputBox";
-import { Primary } from "../../../Components/Buttons";
-import Tags from "../../../Components/Tags";
 import { getUserApi } from "../../../Utils/api";
 import { useState } from "react";
 
@@ -28,7 +26,7 @@ const Profile: React.FC = () => {
             <h1 className="text-3xl font-bold my-4">{data.name}</h1>
             <Tags name="New Staff" color="green" />
             <div className="mt-4">
-              <Primary name="Add New Appointment" />
+              <PrimaryButton name="Add New Appointment" />
             </div>
             <div className="mt-12 w-full">
               <DisabledInputWithLabel text={data.email} label="email" />
