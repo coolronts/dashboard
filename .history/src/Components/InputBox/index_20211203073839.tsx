@@ -1,10 +1,10 @@
 import { Search } from "../Icons";
 
 type props = {
-  placeholder?: string;
+  placeholder: string;
 };
 
-const SearchBox: React.FC<props> = ({ placeholder = "Search" }) => {
+const SearchBox: React.FC = () => {
   const styles = {
     body: "relative",
     textBox:
@@ -14,7 +14,7 @@ const SearchBox: React.FC<props> = ({ placeholder = "Search" }) => {
 
   return (
     <div className={styles.body}>
-      <input className={styles.textBox} type="text" placeholder={placeholder} />
+      <input className={styles.textBox} type="text" placeholder="Search" />
       <Search className={styles.searchIcon} />
     </div>
   );
