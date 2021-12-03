@@ -34,7 +34,7 @@ const Card: React.FC<CardProps> = ({
   };
   return (
     <div className={styles.body}>
-      {type === "primary" && isHeader && (
+      {isHeader && (
         <div className={styles.header}>
           <p className={styles.title}>{title}</p>
           <p className={styles.subtitle}>{subtitle}</p>
