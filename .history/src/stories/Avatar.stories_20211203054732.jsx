@@ -1,5 +1,5 @@
 import Avatar from "../Components/Avatar";
-import Center from "./Center"
+import Center from "../Center"
 
 export default {
     title: "Avatar",
@@ -8,7 +8,7 @@ export default {
 const Template = (args) =>
     <Center>
         <Avatar {...args} />
-    </Center>
+    </Center>;
 
 export const AvatarImage = Template.bind({});
 AvatarImage.args = {

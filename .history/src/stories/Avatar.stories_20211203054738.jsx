@@ -1,5 +1,5 @@
 import Avatar from "../Components/Avatar";
-import Center from "./Center"
+import Center from "../Center"
 
 export default {
     title: "Avatar",

@@ -1,14 +1,10 @@
 import Avatar from "../Components/Avatar";
-import Center from "./Center"
 
 export default {
     title: "Avatar",
     component: Avatar,
 };
-const Template = (args) =>
-    <Center>
-        <Avatar {...args} />
-    </Center>
+const Template = (args) => < Avatar {...args }/>;
 
 export const AvatarImage = Template.bind({});
 AvatarImage.args = {
