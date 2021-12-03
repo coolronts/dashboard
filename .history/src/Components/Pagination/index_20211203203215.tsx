@@ -34,6 +34,7 @@ const Pagination: React.FC<props> = ({ items, showItems }) => {
             {i + 1}
           </span>
         ))}
+
         <ArrowRight className={styles.icon} />
       </div>
     </div>
