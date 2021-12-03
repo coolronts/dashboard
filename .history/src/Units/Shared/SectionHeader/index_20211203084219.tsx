@@ -10,7 +10,7 @@ const SectionHeader: React.FC = () => {
     body: "flex justify-between mt-12",
     heading: "text-3xl text-gray-800 font-bold capitalize",
     leftComponent: "flex items-center justify-around w-1/3",
-    searchInput: "w-1/2 ml-36",
+    searchInput: "w-2/5 ml-36",
     hr: "bg-gray-300 h-1 my-3",
   };
   const location = useLocation();

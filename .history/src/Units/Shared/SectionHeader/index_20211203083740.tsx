@@ -9,9 +9,7 @@ const SectionHeader: React.FC = () => {
   const styles = {
     body: "flex justify-between mt-12",
     heading: "text-3xl text-gray-800 font-bold capitalize",
-    leftComponent: "flex items-center justify-around w-1/3",
-    searchInput: "w-1/2 ml-36",
-    hr: "bg-gray-300 h-1 my-3",
+    leftComponent: "flex items-center justify-around w-1/4",
   };
   const location = useLocation();
 
@@ -26,14 +24,14 @@ const SectionHeader: React.FC = () => {
       <div className={styles.body}>
         <h1 className={styles.heading}>{header}</h1>
         <div className={styles.leftComponent}>
-          <div className={styles.searchInput}>
+          <div className="w-1/2">
             <SearchInput />
           </div>
           <RoundButton Icon={<Notifications />} />
           <Avatar />
         </div>
       </div>
-      <hr className={styles.hr} />
+      <hr className="bg-gray-300 h-1 my-3" />
     </>
   );
 };
