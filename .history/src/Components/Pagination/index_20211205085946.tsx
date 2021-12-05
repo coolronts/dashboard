@@ -51,12 +51,10 @@ const Pagination: React.FC<props> = ({ items, showItems }) => {
     items,
     showItems,
     currentPage,
-    maxPageNumberLimit,
+    minPageNumberLimit,
     minPageNumberLimit,
     decrementHellip,
     incrementHellip,
-    totalPage,
-    pageNumberLimit,
   ]);
 
   return (

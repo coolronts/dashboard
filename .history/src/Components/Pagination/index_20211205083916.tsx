@@ -6,11 +6,12 @@ import { useEffect, useState } from "react";
 type props = {
   items: number;
   showItems: number;
+  siblings?: number;
 };
-const Pagination: React.FC<props> = ({ items, showItems }) => {
+const Pagination: React.FC<props> = ({ items, showItems, siblings = 1 }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPage, setTotalPage] = useState(0);
-  const [pageNumberLimit, setPageNumberLimit] = useState<number>(0);
+  const [pageNumberLimit, setpageNumberLimit] = useState(5);
   const [maxPageNumberLimit, setMaxPageNumberLimit] = useState(5);
   const [minPageNumberLimit, setMinPageNumberLimit] = useState(0);
   const [decrementHellip, setDecrementHellip] = useState(false);
@@ -18,17 +19,22 @@ const Pagination: React.FC<props> = ({ items, showItems }) => {
 
   const styles = {
     body: "bg-white relative px-3 h-16 shadow rounded-2xl text-gray-400",
-    icon: "rounded-full bg-gray-200  text-4xl shadow cursor-pointer min-w-max min-h-max",
+    icon: "rounded-full bg-gray-200  text-4xl shadow cursor-pointer",
     item: `rounded-full bg-gray-200 flex items-center justify-center h-8 w-8 text-lg cursor-pointer shadow mx-2`,
     row: "flex items-center h-full text-xl font-sans font-semibold px-2",
     numberRows: "flex w-full items-center",
     currentPage: "bg-blue-400 text-white",
-    hellip: "mx-2",
+    hellip: "px-2",
+    space: "w-4",
   };
-  if (pageNumberLimit === 0) setPageNumberLimit(showItems);
+  let pageIncrementBtn = null;
+  if (totalPage > maxPageNumberLimit) {
+    pageIncrementBtn = <p className={styles.hellip}> &hellip; </p>;
+  }
 
   useEffect(() => {
     setTotalPage(Math.ceil(items / showItems));
+    console.log(minPageNumberLimit, maxPageNumberLimit, currentPage);
     if (currentPage + 1 > maxPageNumberLimit + 1) {
       setMaxPageNumberLimit(maxPageNumberLimit + pageNumberLimit);
       setMinPageNumberLimit(minPageNumberLimit + pageNumberLimit);
@@ -42,21 +48,13 @@ const Pagination: React.FC<props> = ({ items, showItems }) => {
     } else {
       setDecrementHellip(false);
     }
-    if (totalPage > maxPageNumberLimit) {
-      setIncrementHellip(true);
-    } else {
-      setIncrementHellip(false);
-    }
   }, [
     items,
     showItems,
     currentPage,
-    maxPageNumberLimit,
+    minPageNumberLimit,
     minPageNumberLimit,
     decrementHellip,
-    incrementHellip,
-    totalPage,
-    pageNumberLimit,
   ]);
 
   return (
@@ -68,14 +66,8 @@ const Pagination: React.FC<props> = ({ items, showItems }) => {
             currentPage > 1 && setCurrentPage(currentPage - 1);
           }}
         />
-        <p
-          className={`${styles.hellip} ${
-            decrementHellip ? "visible" : "invisible"
-          }`}
-        >
-          {" "}
-          &hellip;{" "}
-        </p>
+        <div className={styles.space} />
+        {decrementHellip && <p className={styles.hellip}> &hellip; </p>}
         <div className={styles.numberRows}>
           {[...Array(totalPage)].map(
             (item, i) =>
@@ -95,13 +87,7 @@ const Pagination: React.FC<props> = ({ items, showItems }) => {
               )
           )}
         </div>
-        <p
-          className={`${styles.hellip} ${
-            incrementHellip ? "visible" : "invisible"
-          }`}
-        >
-          &hellip;
-        </p>
+        {incrementHellip && <p className={styles.hellip}> &hellip; </p>}
         <ArrowRight
           className={styles.icon}
           onClick={() => {

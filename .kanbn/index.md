@@ -22,6 +22,7 @@ completedColumns:
 
 - [staff-page](tasks/staff-page.md)
 - [story-book-components](tasks/story-book-components.md)
+- [pagination-component](tasks/pagination-component.md)
 
 ## Done
 

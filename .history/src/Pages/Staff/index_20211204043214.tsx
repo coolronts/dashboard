@@ -160,7 +160,7 @@ const Staff: React.FC = () => {
           <DropDown items={[10, 20, 30]} />
         </div>
         <div className="w-1/4">
-          <Pagination items={120} showItems={5} />
+          <Pagination items={60} showItems={10} />
         </div>
       </div>
     </div>

@@ -6,11 +6,12 @@ import { useEffect, useState } from "react";
 type props = {
   items: number;
   showItems: number;
+  siblings?: number;
 };
-const Pagination: React.FC<props> = ({ items, showItems }) => {
+const Pagination: React.FC<props> = ({ items, showItems, siblings = 1 }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPage, setTotalPage] = useState(0);
-  const [pageNumberLimit, setPageNumberLimit] = useState<number>(0);
+  const [pageNumberLimit, setpageNumberLimit] = useState(5);
   const [maxPageNumberLimit, setMaxPageNumberLimit] = useState(5);
   const [minPageNumberLimit, setMinPageNumberLimit] = useState(0);
   const [decrementHellip, setDecrementHellip] = useState(false);
@@ -25,10 +26,10 @@ const Pagination: React.FC<props> = ({ items, showItems }) => {
     currentPage: "bg-blue-400 text-white",
     hellip: "mx-2",
   };
-  if (pageNumberLimit === 0) setPageNumberLimit(showItems);
 
   useEffect(() => {
     setTotalPage(Math.ceil(items / showItems));
+    console.log(minPageNumberLimit, maxPageNumberLimit, currentPage);
     if (currentPage + 1 > maxPageNumberLimit + 1) {
       setMaxPageNumberLimit(maxPageNumberLimit + pageNumberLimit);
       setMinPageNumberLimit(minPageNumberLimit + pageNumberLimit);
@@ -51,12 +52,10 @@ const Pagination: React.FC<props> = ({ items, showItems }) => {
     items,
     showItems,
     currentPage,
-    maxPageNumberLimit,
+    minPageNumberLimit,
     minPageNumberLimit,
     decrementHellip,
     incrementHellip,
-    totalPage,
-    pageNumberLimit,
   ]);
 
   return (

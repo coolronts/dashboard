@@ -107,9 +107,9 @@ const Staff: React.FC = () => {
         <>
           <div className="pb-8 ">
             <Tabs options={options}>
-              {[...Array(3)].map((i) => (
-                <p>Hello</p>
-              ))}
+              <p></p>
+              <p> </p>
+              <p> </p>
             </Tabs>
           </div>
           <div className="flex justify-between items-center text-gray-600 font-sans mt-6  ">
@@ -160,7 +160,7 @@ const Staff: React.FC = () => {
           <DropDown items={[10, 20, 30]} />
         </div>
         <div className="w-1/4">
-          <Pagination items={120} showItems={5} />
+          <Pagination items={80} showItems={10} />
         </div>
       </div>
     </div>

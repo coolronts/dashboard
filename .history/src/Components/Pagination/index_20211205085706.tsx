@@ -6,8 +6,9 @@ import { useEffect, useState } from "react";
 type props = {
   items: number;
   showItems: number;
+  siblings?: number;
 };
-const Pagination: React.FC<props> = ({ items, showItems }) => {
+const Pagination: React.FC<props> = ({ items, showItems, siblings = 1 }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPage, setTotalPage] = useState(0);
   const [pageNumberLimit, setPageNumberLimit] = useState<number>(0);
@@ -25,8 +26,10 @@ const Pagination: React.FC<props> = ({ items, showItems }) => {
     currentPage: "bg-blue-400 text-white",
     hellip: "mx-2",
   };
-  if (pageNumberLimit === 0) setPageNumberLimit(showItems);
 
+  useEffect(() => {
+    if (pageNumberLimit !== 0) setPageNumberLimit(showItems);
+  }, [pageNumberLimit]);
   useEffect(() => {
     setTotalPage(Math.ceil(items / showItems));
     if (currentPage + 1 > maxPageNumberLimit + 1) {
@@ -51,12 +54,10 @@ const Pagination: React.FC<props> = ({ items, showItems }) => {
     items,
     showItems,
     currentPage,
-    maxPageNumberLimit,
+    minPageNumberLimit,
     minPageNumberLimit,
     decrementHellip,
     incrementHellip,
-    totalPage,
-    pageNumberLimit,
   ]);
 
   return (

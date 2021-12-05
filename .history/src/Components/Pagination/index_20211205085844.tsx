@@ -25,7 +25,7 @@ const Pagination: React.FC<props> = ({ items, showItems }) => {
     currentPage: "bg-blue-400 text-white",
     hellip: "mx-2",
   };
-  if (pageNumberLimit === 0) setPageNumberLimit(showItems);
+  if (pageNumberLimit !== 0) setPageNumberLimit(showItems);
 
   useEffect(() => {
     setTotalPage(Math.ceil(items / showItems));
@@ -51,12 +51,10 @@ const Pagination: React.FC<props> = ({ items, showItems }) => {
     items,
     showItems,
     currentPage,
-    maxPageNumberLimit,
+    minPageNumberLimit,
     minPageNumberLimit,
     decrementHellip,
     incrementHellip,
-    totalPage,
-    pageNumberLimit,
   ]);
 
   return (
