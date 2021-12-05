@@ -22,13 +22,14 @@ completedColumns:
 
 - [staff-page](tasks/staff-page.md)
 - [story-book-components](tasks/story-book-components.md)
-- [pagination-component](tasks/pagination-component.md)
+- [staff-page-modal](tasks/staff-page-modal.md)
 
 ## Done
 
 - [tags](tasks/tags.md)
 - [api-fix](tasks/api-fix.md)
 - [modal](tasks/modal.md)
+- [pagination-component](tasks/pagination-component.md)
 - [staff-api](tasks/staff-api.md)
 - [appointments-table](tasks/appointments-table.md)
 - [tags-icons](tasks/tags-icons.md)
