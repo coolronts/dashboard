@@ -1,4 +1,4 @@
-import { ArrowLeft, ArrowRight, ThreeDots } from "../Icons";
+import { ArrowLeft, ArrowRight } from "../Icons";
 import { useEffect, useState } from "react";
 
 //FIXME: Pagination Number needs to be Overflowed
@@ -21,9 +21,9 @@ const Pagination: React.FC<props> = ({ items, showItems }) => {
     icon: "text-2xl cursor-pointer min-w-max min-h-max",
     item: `rounded-full flex items-center justify-center h-8 w-8 text-lg cursor-pointer shadow mx-2`,
     row: "flex items-center h-full text-xl font-sans font-semibold px-2",
-    numberRows: "flex w-full items-center justify-center w-full",
+    numberRows: "flex w-full items-center",
     currentPage: "bg-blue-400 text-white",
-    hellip: "mx-2 flex items-center justify-center h-full",
+    hellip: "mx-2 flex items-center justify-center",
   };
   if (pageNumberLimit === 0) setPageNumberLimit(showItems);
 
@@ -73,7 +73,8 @@ const Pagination: React.FC<props> = ({ items, showItems }) => {
             decrementHellip ? "visible" : "invisible"
           }`}
         >
-          <ThreeDots />
+          {" "}
+          &hellip;{" "}
         </p>
         <div className={styles.numberRows}>
           {[...Array(totalPage)].map(
@@ -99,7 +100,7 @@ const Pagination: React.FC<props> = ({ items, showItems }) => {
             incrementHellip ? "visible" : "invisible"
           }`}
         >
-          <ThreeDots />
+          &hellip;
         </p>
         <ArrowRight
           className={styles.icon}
