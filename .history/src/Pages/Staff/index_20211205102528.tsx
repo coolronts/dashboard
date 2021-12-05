@@ -155,7 +155,7 @@ const Staff: React.FC = () => {
           )}
         </>
       )}
-      <div className="flex justify-between items-center ">
+      <div className="flex justify-between items-center bg-red-300 ">
         <div className="w-24 flex items-center">
           <DropDown items={[10, 20, 30]} pagination={true} />
         </div>
